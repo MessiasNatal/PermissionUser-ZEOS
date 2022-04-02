@@ -1,0 +1,56 @@
+package PermissionUserZEOS;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  vclimg,
+  vcl,
+  vclwinx,
+  dbrtl,
+  vcldb,
+  dsnap,
+  ZComponent,
+  ZDbc,
+  ZPlain,
+  ZCore,
+  ZParseSql;
+
+contains
+  PermissionUser in 'PermissionUser.pas',
+  Registro in 'Registro.pas',
+  Query in 'Functions\Query.pas',
+  DM.User.Group in 'Group\DM.User.Group.pas' {DMUserGroup: TDataModule},
+  View.User.GroupPermission in 'Group\View.User.GroupPermission.pas' {ViewUserGroupPermission},
+  View.PermissionUser.Login in 'Login\View.PermissionUser.Login.pas' {ViewPermissionUserLogin},
+  DM.User.Registration in 'Registration\DM.User.Registration.pas' {DMUserRegistration: TDataModule},
+  View.User.InsertEdit in 'Registration\View.User.InsertEdit.pas' {ViewUserInsertEdit},
+  View.User.Password in 'Registration\View.User.Password.pas' {ViewUserPassword},
+  View.User.Registration in 'Registration\View.User.Registration.pas' {ViewUserRegistration};
+
+end.
