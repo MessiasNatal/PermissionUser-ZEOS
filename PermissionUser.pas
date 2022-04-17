@@ -664,7 +664,7 @@ procedure TPermissionUserTable.CreateTable;
         try
           qy.ExecSQL;
         except
-          Exit; //Ajustar para utilizar se existir função do ZEOS que obtem a lista de tabela para verificar a existencia
+          Exit; //Ajustar para utilizar se existir função do ZEOS que obtem a lista de tabela para verificar a existência
         end;
       finally
         Free;
@@ -939,7 +939,7 @@ procedure TPermissionUserTableGroupComponents.CreateTable;
         try
           qy.ExecSQL;
         except
-          Exit; //Ajustar para utilizar se existir função do ZEOS que obtem a lista de tabela para verificar a existencia
+          Exit; //Ajustar para utilizar se existir função do ZEOS que obtem a lista de tabela para verificar a existência
         end;
       finally
         Free;
@@ -1171,7 +1171,7 @@ procedure TPermissionUserTableGroupUser.CreateTable;
         try
           qy.ExecSQL;
         except
-          Exit; //Ajustar para utilizar se existir função do ZEOS que obtem a lista de tabela para verificar a existencia
+          Exit; //Ajustar para utilizar se existir função do ZEOS que obtem a lista de tabela para verificar a existência
         end;
       finally
         Free;
